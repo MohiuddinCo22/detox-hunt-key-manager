@@ -9,9 +9,8 @@ signOut
 import {
 collection,
 onSnapshot,
-query,
-orderBy,
 doc,
+getDoc,
 deleteDoc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 // Authentication Guard
@@ -21,6 +20,8 @@ onAuthStateChanged(auth,(user)=>{
 if(user){
 
 console.log("Logged in:",user.email);
+
+loadProfile(user.uid);
 
 loadKeys();
 
@@ -191,5 +192,31 @@ alert("Key Deleted");
 
 }
 
+
+}
+async function loadProfile(uid){
+
+const userRef = doc(db,"users",uid);
+
+const userSnap = await getDoc(userRef);
+
+
+if(userSnap.exists()){
+
+const data=userSnap.data();
+
+
+document.getElementById("profileName").innerText=data.name;
+
+document.getElementById("profileEmail").innerText=data.email;
+
+document.getElementById("profileRole").innerText=data.role;
+
+
+}else{
+
+console.log("Profile not found");
+
+}
 
 }
