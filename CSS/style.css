@@ -6,6 +6,9 @@ font-family:Arial,sans-serif;
 }
 
 body{
+overflow-y:auto;
+height:auto;
+min-height:100vh;  
 background:#0f172a;
 display:flex;
 justify-content:center;
@@ -141,6 +144,7 @@ text-align:center;
 .dashboard{
     width:100%;
     min-height:100vh;
+    overflow:visible;
     padding:20px;
     background:linear-gradient(135deg,#0f172a,#1e293b);
     color:white;
@@ -250,7 +254,8 @@ text-align:center;
     padding:15px;
     backdrop-filter:blur(15px);
     overflow-x:auto;
-
+    overflow-y:visible;
+    margin-bottom:30px;
 }
 
 
