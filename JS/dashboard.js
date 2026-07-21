@@ -51,17 +51,25 @@ generateKey();
 
 // Logout
 
-const logoutBtn=document.getElementById("logoutBtn");
+const logoutBtn = document.getElementById("logoutBtn");
 
+logoutBtn.addEventListener("click", async ()=>{
 
-logoutBtn.addEventListener("click",()=>{
+    try {
 
-signOut(auth)
-.then(()=>{
+        await signOut(auth);
 
-window.location.href="login.html";
+        alert("Logout Successful");
 
-});
+        window.location.href="login.html";
+
+    } catch(error){
+
+        console.log(error);
+
+        alert(error.message);
+
+    }
 
 });
 
