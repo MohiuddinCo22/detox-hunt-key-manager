@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard - Detox Hunt</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<div class="topbar">
+
+<h2>
+Detox Hunt
+</h2>
+
+<button id="logoutBtn">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</button>
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<i class="fa-solid fa-key"></i>
+
+<h3>Total Keys</h3>
+
+<span id="totalKeys">
+0
+</span>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-check"></i>
+
+<h3>Paid</h3>
+
+<span id="totalPaid">
+0
+</span>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Due</h3>
+
+<span id="totalDue">
+0
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="action">
+
+<button id="generateBtn">
+
+<i class="fa-solid fa-plus"></i>
+Generate Key
+
+</button>
+
+</div>
+
+
+
+
+<div class="table-box">
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>SL</th>
+
+<th>User ID</th>
+
+<th>Key</th>
+
+<th>Price</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+
+</tr>
+
+</thead>
+
+
+
+<tbody id="keyList">
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script type="module" src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>
