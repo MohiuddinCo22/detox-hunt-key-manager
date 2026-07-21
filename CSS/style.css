@@ -261,6 +261,13 @@ table{
 
 }
 
+.table-box button{
+    width:auto;
+    padding:8px 12px;
+    margin:3px;
+    font-size:14px;
+}
+
 
 th{
 
