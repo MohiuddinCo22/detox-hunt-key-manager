@@ -10,10 +10,10 @@ import {
 collection,
 onSnapshot,
 query,
-orderBy
+orderBy,
+doc,
+deleteDoc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
-
 // Authentication Guard
 
 onAuthStateChanged(auth,(user)=>{
@@ -125,9 +125,17 @@ keyTable.innerHTML += `
 <td>${data.status}</td>
 
 <td>
-<button>
+
+<button onclick="copyKey('${data.key}')">
 Copy
 </button>
+
+
+<button onclick="deleteKey('${doc.id}')">
+Delete
+</button>
+
+
 </td>
 
 </tr>
@@ -148,6 +156,40 @@ document.getElementById("totalKeys").innerText=snapshot.size;
 
 
 });
+
+
+}
+
+// Copy Key
+
+window.copyKey = function(key){
+
+navigator.clipboard.writeText(key);
+
+alert("Key Copied: " + key);
+
+}
+
+
+
+// Delete Key
+
+window.deleteKey = async function(id){
+
+
+let confirmDelete = confirm("Are you sure you want to delete?");
+
+
+if(confirmDelete){
+
+
+await deleteDoc(doc(db,"keys",id));
+
+
+alert("Key Deleted");
+
+
+}
 
 
 }
