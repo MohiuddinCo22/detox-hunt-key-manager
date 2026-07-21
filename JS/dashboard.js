@@ -78,10 +78,10 @@ function loadKeys(){
 const keyTable=document.getElementById("keyList");
 
 
-const q=query(
-collection(db,"keys"),
-orderBy("createdAt","desc")
-);
+
+const q = collection(db,"keys");
+
+
 
 
 
@@ -94,7 +94,7 @@ keyTable.innerHTML="";
 let sl=1;
 
 
-
+console.log("Total data:", snapshot.size);
 snapshot.forEach((doc)=>{
 
 
