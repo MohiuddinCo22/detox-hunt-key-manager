@@ -261,19 +261,18 @@ table{
 
 }
 
-.table-box button{
-    width:auto;
-    padding:8px 12px;
-    margin:3px;
-    font-size:14px;
-}
 .table-box .delete-btn{
-    background:#ef4444;
+    background:#ef4444 !important;
     color:white;
-    padding:8px 12px;
     width:auto;
+    padding:8px 15px;
     border-radius:10px;
-    font-size:14px;
+    border:none;
+}
+
+
+.table-box .delete-btn:hover{
+    background:#dc2626 !important;
 }
 
 
