@@ -66,10 +66,22 @@ createdAt:serverTimestamp()
 };
 
 
+try {
+
 await addDoc(collection(db,"keys"),data);
 
-
 alert("New Key Generated");
+
+console.log("Saved:", data);
+
+}
+catch(error){
+
+console.log(error);
+
+alert(error.message);
+
+}
 
 
 }
