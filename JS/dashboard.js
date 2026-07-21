@@ -196,27 +196,31 @@ alert("Key Deleted");
 }
 async function loadProfile(uid){
 
-const userRef = doc(db,"users",uid);
+    console.log("Loading profile UID:", uid);
 
-const userSnap = await getDoc(userRef);
+    const userRef = doc(db,"users",uid);
 
-
-if(userSnap.exists()){
-
-const data=userSnap.data();
+    const userSnap = await getDoc(userRef);
 
 
-document.getElementById("profileName").innerText=data.name;
+    if(userSnap.exists()){
 
-document.getElementById("profileEmail").innerText=data.email;
+        const data = userSnap.data();
 
-document.getElementById("profileRole").innerText=data.role;
+        console.log("Profile Found:", data);
 
 
-}else{
+        document.getElementById("profileName").innerText = data.name;
 
-console.log("Profile not found");
+        document.getElementById("profileEmail").innerText = data.email;
 
-}
+        document.getElementById("profileRole").innerText = data.role;
+
+
+    }else{
+
+        console.log("No Profile Found");
+
+    }
 
 }
