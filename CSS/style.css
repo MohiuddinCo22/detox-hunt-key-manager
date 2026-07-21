@@ -322,3 +322,44 @@ padding:25px;
 }
 
 }
+/* Profile Box */
+
+.profile-box{
+
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:18px;
+    border-radius:20px;
+    margin-bottom:25px;
+    backdrop-filter:blur(15px);
+
+}
+
+
+.profile-box h3{
+
+    font-size:22px;
+    margin-bottom:8px;
+
+}
+
+
+.profile-box p{
+
+    color:#cbd5e1;
+    margin-bottom:10px;
+
+}
+
+
+#profileRole{
+
+    display:inline-block;
+    padding:6px 15px;
+    background:#22c55e;
+    color:white;
+    border-radius:20px;
+    font-size:14px;
+    text-transform:uppercase;
+
+}
