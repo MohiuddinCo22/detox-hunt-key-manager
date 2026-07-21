@@ -131,7 +131,7 @@ Copy
 </button>
 
 
-<button onclick="deleteKey('${item.id}')">
+<button class="delete-btn" onclick="deleteKey('${item.id}')">
 Delete
 </button>
 
