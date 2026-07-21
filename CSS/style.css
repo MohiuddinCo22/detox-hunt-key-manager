@@ -6,9 +6,9 @@ font-family:Arial,sans-serif;
 }
 
 body{
-    overflow-x:hidden;
-    overflow-y:auto;
+    margin:0;
     min-height:100vh;
+    overflow-y:auto;
     background:#0f172a;
     color:white;
 }
@@ -142,7 +142,6 @@ text-align:center;
     width:100%;
     min-height:100vh;
     padding:20px;
-    overflow:auto;
 }
 
 
