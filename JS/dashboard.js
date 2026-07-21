@@ -103,10 +103,10 @@ let sl=1;
 
 
 console.log("Total data:", snapshot.size);
-snapshot.forEach((doc)=>{
+snapshot.forEach((item)=>{
 
 
-const data=doc.data();
+const data=item.data();
 
 
 
@@ -131,7 +131,7 @@ Copy
 </button>
 
 
-<button onclick="deleteKey('${doc.id}')">
+<button onclick="deleteKey('${item.id}')">
 Delete
 </button>
 
