@@ -267,7 +267,7 @@ table{
     margin:3px;
     font-size:14px;
 }
-.delete-btn{
+.table-box .delete-btn{
     background:#ef4444;
     color:white;
     padding:8px 12px;
